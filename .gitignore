@@ -1,0 +1,41 @@
+# 依赖目录
+node_modules/
+
+# 构建输出目录
+dist/
+
+# 环境变量文件
+.env
+.env.local
+.env.development
+.env.production
+
+# 日志文件
+*.log
+logs/
+
+# 编辑器/IDE 配置文件
+.vscode/
+.idea/
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# TypeScript 编译缓存
+.tsbuildinfo
+
+# 测试相关文件
+coverage/
+*.test.js
+*.spec.js
+
+# npm/yarn 缓存
+.npm
+.yarn
+.yarnrc
+.pnpm-store/
+
+# 其他
+*.tmp
+*.bak

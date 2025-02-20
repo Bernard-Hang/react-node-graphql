@@ -1,0 +1,472 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #14151a;
+
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(222.2 84% 4.9%);
+
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(222.2 84% 4.9%);
+
+    --primary: #3284ff;
+    --primary-foreground: hsl(210 40% 98%);
+
+    --secondary: hsl(210 40% 96.1%);
+    --secondary-foreground: #3284ff;
+
+    --muted: hsl(210 40% 96.1%);
+    --muted-foreground: hsl(215.4 16.3% 46.9%);
+
+    --accent: hsl(210 40% 96.1%);
+    --accent-foreground: #3284ff;
+
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(210 40% 98%);
+
+    --border: rgba(0, 0, 0, 0.08);
+    --input: rgba(0, 0, 0, 0.08);
+    --table: rgba(0, 0, 0, 0.04);
+    --ring: hsl(0, 0%, 100%);
+    --radius: 0.5rem;
+
+    --zg-normal: #e1edff;
+    --zg-normal-foreground: #3284ff;
+
+    --zg-success: #e0f6ea;
+    --zg-success-light: #30f298;
+    --zg-success-foreground: #30bf73;
+
+    --zg-error: #ffe9e6;
+    --zg-error-dark: #ff524c;
+    --zg-error-foreground: #f25543;
+
+    --zg-warn: #fff2e0;
+    --zg-warn-foreground: #ffaa2a;
+    --zg-warn-light: #ffd634;
+
+    --zg-info: #e1edff;
+    --zg-info-foreground: #3284ff;
+
+    --zg-danger: #ffe9e6;
+    --zg-danger-foreground: #f25543;
+
+    --zg-end: #ededed;
+    --zg-end-foreground: #6d6f73;
+
+    --zg-muted: #f1f3f5;
+    --zg-muted-foreground: #222222;
+
+    --zg-disabled: #adb5bd;
+    --zg-label: #919399;
+    --zg-label-dark: #6d6f73;
+
+    --zg-overlay-darker: #fafafa;
+    --zg-overlay-dark: #f7f7f7;
+    --zg-overlay-light: #ced4da;
+    --zg-overlay-lighter: #f5f5f6;
+
+    --zg-primary: #3284ff;
+    --zg-primary-80: #3284ff80;
+    --zg-primary-normal: #ebf3ff;
+    --zg-primary-light: #f0fbff;
+
+    --prism-color-1: hsl(230, 8%, 24%); /* pre color */
+    --prism-color-2: hsl(230, 1%, 98%); /* pre bg */
+    --prism-color-3: hsl(230, 1%, 90%); /* selection bg */
+    --prism-color-4: hsl(230, 4%, 64%); /* comment color */
+    --prism-color-5: hsl(230, 8%, 24%); /* punctuation color */
+    --prism-color-6: hsl(301, 63%, 40%); /* keyword color */
+    --prism-color-7: hsl(5, 74%, 59%); /* symbol color */
+    --prism-color-8: hsl(198, 99%, 37%); /* url color */
+    --prism-color-9: hsl(119, 34%, 47%); /* attr-value color */
+    --prism-color-11: hsl(35, 99%, 36%); /* attr-name color */
+    --prism-color-12: hsl(221, 87%, 60%); /* variable name color */
+    --prism-color-13: hsl(344, 84%, 43%); /* template-string color */
+    --prism-color-16: hsl(230, 6%, 44%); /** line-number color */
+    --prism-color-17: hsla(230, 8%, 24%, 0.05); /** highlight-line bg */
+    --prism-color-20: hsla(353, 100%, 66%, 0.15); /** diff-deleted line bg */
+    --prism-color-22: hsla(137, 100%, 55%, 0.15); /** diff-inserted line bg */
+
+    --chart-1: 212 100% 60%;
+    --chart-2: 30 100% 55%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: hsl(222.2 84% 4.9%);
+    --foreground: hsl(210 40% 98%);
+
+    --card: hsl(222.2 84% 4.9%);
+    --card-foreground: hsl(210 40% 98%);
+
+    --popover: hsl(222.2 84% 4.9%);
+    --popover-foreground: hsl(210 40% 98%);
+
+    --primary: hsl(210 40% 98%);
+    --primary-foreground: #3284ff;
+
+    --secondary: hsl(217.2 32.6% 17.5%);
+    --secondary-foreground: hsl(210 40% 98%);
+
+    --muted: hsl(217.2 32.6% 17.5%);
+    --muted-foreground: hsl(215 20.2% 65.1%);
+
+    --accent: hsl(217.2 32.6% 17.5%);
+    --accent-foreground: hsl(210 40% 98%);
+
+    --destructive: hsl(0 62.8% 30.6%);
+    --destructive-foreground: hsl(210 40% 98%);
+
+    --border: hsl(217.2 32.6% 17.5%);
+    --input: hsl(217.2 32.6% 17.5%);
+    --ring: hsl(212.7 26.8% 83.9%);
+
+    --prism-color-1: hsl(220, 14%, 71%);
+    --prism-color-2: hsl(220, 13%, 18%);
+    --prism-color-3: hsl(220, 13%, 28%);
+    --prism-color-4: hsl(220, 10%, 40%);
+    --prism-color-5: hsl(220, 14%, 71%);
+    --prism-color-6: hsl(286, 60%, 67%);
+    --prism-color-7: hsl(355, 65%, 65%);
+    --prism-color-8: hsl(187, 47%, 55%);
+    --prism-color-9: hsl(95, 38%, 62%);
+    --prism-color-11: hsl(29, 54%, 61%);
+    --prism-color-12: hsl(207, 82%, 66%);
+    --prism-color-13: hsl(5, 48%, 51%);
+    /* 插件 */
+    --prism-color-16: hsl(220, 9%, 55%);
+    --prism-color-17: hsla(220, 100%, 80%, 0.04);
+    --prism-color-20: hsla(353, 100%, 66%, 0.15);
+    --prism-color-22: hsla(137, 100%, 55%, 0.15);
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .zg-arrow {
+    background:
+      linear-gradient(
+          -125deg,
+          var(--zg-arrow-right-color, transparent) 22px,
+          #fff 22px 32px,
+          var(--zg-arrow-left-color, transparent) 32px 100%
+        )
+        top right,
+      linear-gradient(
+          -55deg,
+          var(--zg-arrow-right-color, transparent) 22px,
+          #fff 22px 32px,
+          var(--zg-arrow-left-color, transparent) 32px 100%
+        )
+        bottom right;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+  }
+
+  pre[class*="language-"] {
+    background: var(--prism-color-2);
+    color: var(--prism-color-1);
+    font-family:
+      "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    line-height: 1.5;
+    tab-size: 2;
+    hyphens: none;
+  }
+
+  /* Selection */
+  pre[class*="language-"] *::-moz-selection {
+    background: var(--prism-color-3);
+    color: inherit;
+  }
+
+  pre[class*="language-"] *::selection {
+    background: var(--prism-color-3);
+    color: inherit;
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1.5rem 1rem;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0.3em;
+    position: relative;
+  }
+  /* lang indicator */
+  pre[data-language]:not([data-processed], [data-no-lang-indicator])::before {
+    content: attr(data-language);
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 0.25rem;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.2em 0.3em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.cdata {
+    color: var(--prism-color-4);
+  }
+
+  .token.doctype,
+  .token.punctuation,
+  .token.entity {
+    color: var(--prism-color-5);
+  }
+
+  .token.attr-name,
+  .token.class-name,
+  .token.maybe-class-name,
+  .token.boolean,
+  .token.constant,
+  .token.number,
+  .token.atrule {
+    color: var(--prism-color-11);
+  }
+
+  .token.keyword {
+    color: var(--prism-color-6);
+  }
+
+  .token.property,
+  .token.tag,
+  .token.symbol,
+  .token.deleted,
+  .token.important {
+    color: var(--prism-color-7);
+  }
+
+  .token.selector,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted,
+  .token.regex,
+  .token.attr-value,
+  .token.attr-value > .token.punctuation {
+    color: var(--prism-color-9);
+  }
+
+  .token.variable,
+  .token.operator,
+  .token.function {
+    color: var(--prism-color-12);
+  }
+
+  .token.url {
+    color: var(--prism-color-8);
+  }
+
+  /* HTML overrides */
+  .token.attr-value > .token.punctuation.attr-equals,
+  .token.special-attr > .token.attr-value > .token.value.css {
+    color: var(--prism-color-5);
+  }
+
+  /* CSS overrides */
+  .language-css .token.selector {
+    color: var(--prism-color-7);
+  }
+
+  .language-css .token.property {
+    color: var(--prism-color-5);
+  }
+
+  .language-css .token.function,
+  .language-css .token.url > .token.function {
+    color: var(--prism-color-8);
+  }
+
+  .language-css .token.url > .token.string.url {
+    color: var(--prism-color-9);
+  }
+
+  .language-css .token.important,
+  .language-css .token.atrule .token.rule {
+    color: var(--prism-color-6);
+  }
+
+  /* JS overrides */
+  .language-javascript .token.operator {
+    color: var(--prism-color-6);
+  }
+
+  .language-javascript
+    .token.template-string
+    > .token.interpolation
+    > .token.interpolation-punctuation.punctuation {
+    color: var(--prism-color-13);
+  }
+
+  /* JSON overrides */
+  .language-json .token.operator {
+    color: var(--prism-color-5);
+  }
+
+  .language-json .token.null.keyword {
+    color: var(--prism-color-11);
+  }
+
+  /* MD overrides */
+  .language-markdown .token.url,
+  .language-markdown .token.url > .token.operator,
+  .language-markdown .token.url-reference.url > .token.string {
+    color: var(--prism-color-5);
+  }
+
+  .language-markdown .token.url > .token.content {
+    color: var(--prism-color-12);
+  }
+
+  .language-markdown .token.url > .token.url,
+  .language-markdown .token.url-reference.url {
+    color: var(--prism-color-8);
+  }
+
+  .language-markdown .token.blockquote.punctuation,
+  .language-markdown .token.hr.punctuation {
+    color: var(--prism-color-4);
+    font-style: italic;
+  }
+
+  .language-markdown .token.code-snippet {
+    color: var(--prism-color-9);
+  }
+
+  .language-markdown .token.bold .token.content {
+    color: var(--prism-color-11);
+  }
+
+  .language-markdown .token.italic .token.content {
+    color: var(--prism-color-6);
+  }
+
+  .language-markdown .token.strike .token.content,
+  .language-markdown .token.strike .token.punctuation,
+  .language-markdown .token.list.punctuation,
+  .language-markdown .token.title.important > .token.punctuation {
+    color: var(--prism-color-7);
+  }
+
+  /* General */
+  .token.bold {
+    font-weight: bold;
+  }
+
+  .token.comment,
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+
+  .token.namespace {
+    opacity: 0.8;
+  }
+
+  /* #region rehype-prism-plus */
+  pre {
+    overflow-x: auto;
+  }
+
+  /**
+   * Inspired by gatsby remark prism - https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/
+   * 1. Make the element just wide enough to fit its content.
+   * 2. Always fill the visible space in .code-highlight.
+   */
+  .code-highlight {
+    float: left; /* 1 */
+    min-width: 100%; /* 2 */
+  }
+
+  .code-line {
+    display: block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: -1em;
+    margin-right: -1em;
+    border-left: 2px solid transparent; /* Set placeholder for highlight accent border color to transparent */
+  }
+
+  .code-line.inserted {
+    background-color: var(--prism-color-22); /* Set inserted line (+) color */
+  }
+
+  .code-line.deleted {
+    background-color: var(--prism-color-20); /* Set deleted line (-) color */
+  }
+
+  .highlight-line {
+    background-color: var(--prism-color-17); /* Set highlight bg color */
+    border-left: 2px solid var(--prism-color-8); /* Set highlight accent border color */
+  }
+
+  .line-number::before {
+    display: inline-block;
+    width: 1rem;
+    text-align: right;
+    margin-right: 1em;
+    margin-left: -0.5em;
+    color: var(--prism-color-16); /* Line number color */
+    content: attr(line);
+  }
+}
+
+@layer base {
+  /* * {
+    @apply border;
+  }
+  html {
+    @apply overflow-hidden;
+  }
+  body {
+    @apply bg-background text-foreground;
+  } */
+}
